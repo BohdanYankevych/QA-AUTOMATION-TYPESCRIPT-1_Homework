@@ -10,4 +10,4 @@ console.log(sameClass.name);
 console.log(sameClass.fullNameGetter);
 
 sayAge(25);
-console.log('_________________________________')
+console.log('_________________________________');

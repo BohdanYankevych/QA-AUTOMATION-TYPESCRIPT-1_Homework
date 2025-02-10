@@ -10,7 +10,7 @@ export class SameClass {
     }
 
     set name(name){
-        if(!name){
+        if (!name){
             throw new Error('Name is required');
         } else {
             this.#privateName = name;
@@ -31,7 +31,7 @@ sameClass.name = 'Curt';
 console.log(sameClass.name);
 console.log(sameClass.fullNameGetter);
 
-console.log('_----------------------------------')
+console.log('_----------------------------------');
 
 // Домашнє завдання
 

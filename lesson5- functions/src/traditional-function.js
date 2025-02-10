@@ -18,14 +18,14 @@ export function sayName(name){
 }
 
 export function sayAge(age){
-    console.log('  You are ' +age +' years old');
+    console.log('  You are ' + age + ' years old');
 }
 
 export function sayJob(job){
     let jobInternal;
     if (!job){
         jobInternal = {role: 'Unemployed'};
-    } else{
+    } else {
         jobInternal = job;
     }
     console.log('  You are a ', jobInternal);

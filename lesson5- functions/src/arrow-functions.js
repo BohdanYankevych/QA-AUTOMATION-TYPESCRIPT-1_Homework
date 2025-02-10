@@ -9,14 +9,14 @@ const sayName = (name) => {
 };
 
 const sayAge = (age) =>{
-    console.log('  You are ' +age +' years old');
+    console.log('  You are ' + age + ' years old');
 };
 
 const sayJob = (job) => {
     let jobInternal;
     if (!job){
         jobInternal = {role: 'Unemployed'};
-    } else{
+    } else {
         jobInternal = job;
     }
     console.log('  You are a ', jobInternal);
