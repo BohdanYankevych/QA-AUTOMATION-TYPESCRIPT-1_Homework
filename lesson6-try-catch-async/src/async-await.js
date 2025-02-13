@@ -24,4 +24,7 @@ function processJsonDataAsync(data) {
 }
 
 
-fetchDataWithAsyncAwait(apiUrlAsync);
+//fetchDataWithAsyncAwait(apiUrlAsync);
+(async () => {
+    await fetchDataWithAsyncAwait(apiUrlAsync);
+})();
