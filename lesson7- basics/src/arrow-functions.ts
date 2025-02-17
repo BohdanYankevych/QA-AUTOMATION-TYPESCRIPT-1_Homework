@@ -1,10 +1,8 @@
-const sumArray = (arr: number[] | string[]): number | string => {
+const sumArray = (arr: number[] | string[]): unknown => {
     if (arr.every(item => typeof item === 'number')) {
         return (arr as number[]).reduce((sum, num) => sum + num, 0);
     } else if (arr.every(item => typeof item === 'string')) {
         return (arr as string[]).join('');
-    } else {
-        throw new Error('Array must contain either only numbers or only strings.');
     }
 };
 
