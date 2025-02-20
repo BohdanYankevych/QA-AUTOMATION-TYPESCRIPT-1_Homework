@@ -20,3 +20,10 @@ const state2 = 'error' as State;
 
 console.log(state, state2);
 
+type inputArrays = string[] | number[];
+type inputArray = (string | number)[];
+
+const input1: inputArrays = ['a', 'b', 'c'];
+const input2: inputArray = ['a', 'b', 'c', 5];
+
+console.log(input1, input2);
