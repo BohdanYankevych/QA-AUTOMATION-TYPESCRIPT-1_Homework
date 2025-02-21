@@ -89,12 +89,12 @@ export interface User {
 }
 export async function getJson(): Promise<Results>{
     const response =  await fetch('https://randomuser.me/api/');
-    const json = await response.json() as Results; 
+    const json = await response.json() as Results;
     return json;
 }
 
 (async () => {
-   const data = await getJson();
-   console.log(data.results[0]);
-   console.log(data.results[0].login.username);
+    const data = await getJson();
+    console.log(data.results[0]);
+    console.log(data.results[0].login.username);
 })();

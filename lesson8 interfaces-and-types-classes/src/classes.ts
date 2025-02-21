@@ -1,4 +1,4 @@
-import { getJson } from "./interfaces";
+import { getJson } from './interfaces';
 
 export class ResultsClass {
     private _name;
@@ -110,16 +110,16 @@ export interface User {
 
 /* async function getJson(): Promise<ResultsClass>{
     const response =  await fetch('https://randomuser.me/api/');
-    const json = await response.json() as ResultsClass; 
+    const json = await response.json() as ResultsClass;
     return json;
 }
  */
 
 (async () => {
-   const data = await getJson();
-   console.log(data.results[0]);
-   //console.log(data.sayHello()); // will throw the error TypeError: data.sayHello is not a function
-   const data2 = new ResultsClass('Joe', data.results);
-   console.log(data2.sayHello());
-   console.log(data2.results[0].gender);
+    const data = await getJson();
+    console.log(data.results[0]);
+    //console.log(data.sayHello()); // will throw the error TypeError: data.sayHello is not a function
+    const data2 = new ResultsClass('Joe', data.results);
+    console.log(data2.sayHello());
+    console.log(data2.results[0].gender);
 })();

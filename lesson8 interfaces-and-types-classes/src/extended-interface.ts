@@ -1,4 +1,4 @@
-import { Results } from "./interfaces";
+import { Results } from './interfaces';
 
 export interface ExtendedResults extends Results {
     timeLine:{
@@ -8,7 +8,7 @@ export interface ExtendedResults extends Results {
     }
 }
 
-const res: Partial<ExtendedResults> ={};
+const res: Partial<ExtendedResults> = {};
 res.timeLine =  {
     end:'smth',
     start: ''
