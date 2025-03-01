@@ -1,5 +1,5 @@
 import { Vehicle } from './vehicle';
-import { Chargeable } from '../interfaces/chargeable';
+import { Chargeable } from 'HW/interfaces/chargeable';
 
 export class ElectricScooter extends Vehicle implements Chargeable {
     private batteryLevel: number;

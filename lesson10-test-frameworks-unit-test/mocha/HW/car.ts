@@ -1,5 +1,5 @@
 import { Vehicle } from './vehicle';
-import { Fuelable } from '../interfaces/fuelable';
+import { Fuelable } from 'HW/interfaces/fuelable';
 
 export class Car extends Vehicle implements Fuelable {
     private fuelLevel: number;
