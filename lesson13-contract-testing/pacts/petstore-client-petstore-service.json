@@ -1,0 +1,21 @@
+{
+  "consumer": {
+    "name": "petstore-client"
+  },
+  "interactions": [],
+  "metadata": {
+    "pact-js": {
+      "version": "14.0.0"
+    },
+    "pactRust": {
+      "ffi": "0.4.22",
+      "models": "1.2.3"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "petstore-service"
+  }
+}

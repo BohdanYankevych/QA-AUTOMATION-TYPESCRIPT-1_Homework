@@ -1,4 +1,5 @@
 import { PactV3, MatchersV3, V3MockServer } from '@pact-foundation/pact';
+import axios from 'axios';
 
 describe('Petstore API Contract Test', () => {
     const provider = new PactV3({
@@ -6,10 +7,12 @@ describe('Petstore API Contract Test', () => {
         provider: 'petstore-service'
     });
 
-    after(async () => {
+    let mockServerUrl: string;
+
+    before(async () => {
         await provider.executeTest(async (mockServer: V3MockServer) => {
-            console.log(`Mock server запущено на ${mockServer.url}`);
-            return Promise.resolve();
+            mockServerUrl = mockServer.url;
+            console.log(`Mock server is launched on ${mockServer.url}`);
         });
     });
 
@@ -31,6 +34,13 @@ describe('Petstore API Contract Test', () => {
                     status: 'available'
                 })
             });
+
+        // Відправляємо реальний запит до мока сервера
+        const response = await axios.get(`${mockServerUrl}/pet/123`, {
+            headers: { Accept: 'application/json' }
+        });
+
+        console.log('Response received:', response.data);
     });
 
     it('The animal does not exist', async () => {
@@ -45,5 +55,13 @@ describe('Petstore API Contract Test', () => {
             .willRespondWith({
                 status: 404
             });
+
+        try {
+            await axios.get(`${mockServerUrl}/pet/9999`, {
+                headers: { Accept: 'application/json' }
+            });
+        } catch {
+            console.log('Expected error 404');
+        }
     });
 });

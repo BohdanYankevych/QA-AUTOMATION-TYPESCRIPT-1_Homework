@@ -6,7 +6,10 @@ describe('Petstore API - Provider Contract Test', () => {
             provider: 'petstore-service',
             providerBaseUrl: 'https://petstore.swagger.io/v2',
             pactBrokerUrl: 'https://pact-broker-url.com',
-            publishVerificationResult: true
+            pactUrls: ['https://pact-broker-url.com/pacts/latest'],
+            consumerVersionSelectors: [{ latest: true }],
+            publishVerificationResult: true,
+            providerVersion: '1.0.0'
         });
 
         await verifier.verifyProvider();
