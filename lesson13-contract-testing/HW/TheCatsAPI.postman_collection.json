@@ -184,19 +184,16 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
+							"let jsonData = pm.response.json();",
+							"pm.test(\"Статус-код 200\", function () {",
 							"    pm.response.to.have.status(200);",
-							"",
-							"   const resp = pm.response.json()",
-							"       .find(x => x.id === pm.collectionVariables.get(\"theCatPicId\"));",
-							"",
-							"   console.log(resp);",
-							"",
-							"   const breeds = resp.breeds.map(x => x.id);",
-							"   console.log(breeds);",
-							"",
-							"   pm.expect(breeds).to.include(pm.collectionVariables.get(\"theCatBreed\"));",
-							"});"
+							"});",
+							"pm.test(\"Є зображення\", function () {",
+							"    pm.expect(jsonData).to.be.an('array').that.is.not.empty;",
+							"    pm.expect(jsonData[0]).to.have.property('id');",
+							"    pm.expect(jsonData[0]).to.have.property('url');",
+							"});",
+							"pm.environment.set(\"image_id\", jsonData[0].id);"
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -226,6 +223,26 @@
 		},
 		{
 			"name": "/votes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = pm.response.json();",
+							"pm.test(\"Статус-код 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"pm.test(\"Голос збережено\", function () {",
+							"    pm.expect(jsonData).to.have.property('message', 'SUCCESS');",
+							"    pm.expect(jsonData).to.have.property('id');",
+							"});",
+							"pm.environment.set(\"vote_id\", jsonData.id);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [
@@ -258,6 +275,26 @@
 		},
 		{
 			"name": "/favourites",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = pm.response.json();",
+							"pm.test(\"Статус-код 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Додано в улюблені\", function () {",
+							"    pm.expect(jsonData).to.have.property('message', 'SUCCESS');",
+							"    pm.expect(jsonData).to.have.property('id');",
+							"});",
+							"pm.environment.set(\"favourite_id\", jsonData.id);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [
@@ -274,7 +311,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"image_id\": \"8sTavd-5L\",\n  \"sub_id\": \"VITE\"\n}",
+					"raw": "{\n  \"image_id\": \"_EDFkg_Rc\",\n  \"sub_id\": \"VITE\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -318,7 +355,68 @@
 			"response": []
 		},
 		{
-			"name": "/delete/images",
+			"name": "/favorites",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = pm.response.json();",
+							"pm.test(\"Статус-код 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Переконатися, що зображення є в улюблених\", function () {",
+							"    let favourite = jsonData.find(item => item.id === parseInt(pm.environment.get(\"favourite_id\")));",
+							"    pm.expect(favourite).to.be.an('object');",
+							"    pm.expect(favourite).to.have.property('image_id', pm.environment.get(\"image_id\"));",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{theCatsApiKey}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{theCatsApiBaseUrl}}/favourites",
+					"host": [
+						"{{theCatsApiBaseUrl}}"
+					],
+					"path": [
+						"favourites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delete/favorites",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Статус-код 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Зображення успішно видалено\", function () {",
+							"    let jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.property('message', 'SUCCESS');",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"method": "DELETE",
 				"header": [
@@ -329,13 +427,71 @@
 					}
 				],
 				"url": {
-					"raw": "{{theCatsApiBaseUrl}}/images/{{theCatPicId}}",
+					"raw": "{{theCatsApiBaseUrl}}/favourites/{{theCatFavId}}",
 					"host": [
 						"{{theCatsApiBaseUrl}}"
 					],
 					"path": [
-						"images",
-						"{{theCatPicId}}"
+						"favourites",
+						"{{theCatFavId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/fake_votes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Статус-код 400 або 404\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([400, 404]);",
+							"});",
+							"pm.test(\"Сервер не приймає випадкові ID\", function () {",
+							"    let jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.property('message');",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-api-key",
+						"value": "{{theCatsApiKey}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"image_id\": \"random_id_123\",\n  \"value\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{theCatsApiBaseUrl}}/votes",
+					"host": [
+						"{{theCatsApiBaseUrl}}"
+					],
+					"path": [
+						"votes"
 					]
 				}
 			},
@@ -388,6 +544,11 @@
 		{
 			"key": "theCatVotelt",
 			"value": "1257066",
+			"type": "string"
+		},
+		{
+			"key": "theCatFavId",
+			"value": "232520084",
 			"type": "string"
 		}
 	]
