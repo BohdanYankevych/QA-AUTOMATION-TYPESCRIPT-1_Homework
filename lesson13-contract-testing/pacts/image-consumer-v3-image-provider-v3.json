@@ -1,0 +1,71 @@
+{
+  "consumer": {
+    "name": "image-consumer-v3"
+  },
+  "interactions": [
+    {
+      "description": "A request to get images",
+      "providerStates": [
+        {
+          "name": "Images exist"
+        }
+      ],
+      "request": {
+        "headers": {
+          "accept": "application/json",
+          "x-api-key": "live_uuprBFKIIvV9ksh2V2afoDdApLX5WVTqEqIsuepjO5HRk02nBq6XgMF5sNNhVuCC"
+        },
+        "method": "GET",
+        "path": "/images"
+      },
+      "response": {
+        "body": [
+          {
+            "breed_ids": "orie",
+            "breeds": [],
+            "created_at": "2025-03-06T13:33:33.000Z",
+            "height": 734,
+            "id": "_JITL1lt2",
+            "original_filename": "Cat_August_2010-4.jpg",
+            "sub_id": "VILE",
+            "url": "https://cdn2.thecatapi.com/images/_JITL1lt2.jpg",
+            "width": 1200
+          }
+        ],
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "header": {},
+          "status": {}
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "14.0.0"
+    },
+    "pactRust": {
+      "ffi": "0.4.22",
+      "models": "1.2.3"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "image-provider-v3"
+  }
+}
