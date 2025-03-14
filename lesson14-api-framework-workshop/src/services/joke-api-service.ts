@@ -1,5 +1,5 @@
 import axios from 'axios';
-import type { AxiosResponse } from 'axios';
+import { AxiosResponse } from 'axios';
 
 // Інтерфейс для жарту
 export interface Joke {

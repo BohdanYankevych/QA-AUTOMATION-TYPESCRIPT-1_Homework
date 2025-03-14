@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import { JokeApiService } from '../services/joke-api-service';
 import { Joke } from '../types/joke-types';
-import { AxiosError, AxiosResponse } from 'axios';
+import { type AxiosError, type AxiosResponse } from 'axios';
 
 describe('Joke API Tests', () => {
     it('should return a random joke', async () => {
