@@ -5,6 +5,7 @@
     "@stylistic/eslint-plugin-ts": "^4.0.1",
     "@typescript-eslint/eslint-plugin": "^8.24.1",
     "@typescript-eslint/parser": "^8.24.1",
+    "cypress": "^14.2.0",
     "eslint": "^9.20.1",
     "eslint-plugin-prettier": "^5.2.3",
     "eslint-plugin-unicorn": "^57.0.0",
