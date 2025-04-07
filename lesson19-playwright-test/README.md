@@ -1,24 +1,25 @@
-# ts-eslint-config
-recommended config from me for programming on a TypeScript
+# Lesson 18-19 Playwright tests
 
-In order to use this config you have to install the following NPM packages
-```
-npm i -D typescript ts-node eslint typescript-eslint @eslint/js @typescript-eslint/eslint-plugin @typescript-eslint/parser @stylistic/eslint-plugin @stylistic/eslint-plugin-ts eslint-plugin-prettier eslint-plugin-unicorn prettier globals
-```
+## This lesson covers the following topics:
 
-Then put eslint.config.mjs into your base directory
+1. **What is Playwright**
+2. **Pros and const of Playwright**
+3. **Install Playwright Test**
+4. **Playwright config**
+5. **Project dependencies in test run and storage state usage**
+6. **Page Objects**
+7. **Tests**
 
-you can add a script to your package.json
-```
-"scripts": {
-  "lint": "eslint .",
-  "build": "npm run lint && tsc --build",
-}
-```
+## How to Run the Code
 
-**Alternatively**, just copy the content of this folder into your project folder and run
-```
-npm i
-```
+To run the code, follow these steps:
 
-and start coding
+1. Install the necessary dependencies:
+    ```sh
+    npm install
+    ```
+
+2. Execute the JavaScript file:
+    ```sh
+    npm run test
+    ```

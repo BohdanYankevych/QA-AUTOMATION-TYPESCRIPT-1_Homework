@@ -1,15 +1,13 @@
 import { Page, Locator, expect } from '@playwright/test';
 
 export class HeaderComponent {
-    private page: Page;
-    private heroText: Locator;
+    public constructor(private readonly page: Page) {}
 
-    public constructor(page: Page) {
-        this.page = page;
-        this.heroText = page.locator('#hero-section-brand-heading');
+    public get heroText(): Locator {
+        return this.page.locator('#hero-section-brand-heading');
     }
 
-    public async findHeader(): Promise<void> {
+    public async expectToBeVisible(): Promise<void> {
         await expect(this.heroText).toBeVisible();
     }
 }
