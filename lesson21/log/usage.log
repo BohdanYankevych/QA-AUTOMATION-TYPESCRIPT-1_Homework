@@ -1,0 +1,59 @@
+2025-04-14 20:51:52 - [32minfo[39m: Creating configuration file...
+2025-04-14 20:51:52 - [32minfo[39m: Adding new script(s) in package.json...
+2025-04-14 20:51:52 - [32minfo[39m: Setup completed
+2025-04-14 20:57:41 - [32minfo[39m: Running SDK with args /usr/local/bin/node /Users/bohdanyankevych/QA-AUTOMATION-TYPESCRIPT-1_Homework./lesson21/node_modules/.bin/browserstack-node-sdk playwright test
+2025-04-14 20:57:41 - [32minfo[39m: Reading configs from /Users/bohdanyankevych/QA-AUTOMATION-TYPESCRIPT-1_Homework./lesson21/browserstack.yml
+2025-04-14 20:57:41 - [32minfo[39m: SDK run started with id: 53fe4afe-c962-416c-99b2-62d927b8f606
+2025-04-14 20:57:41 - [32minfo[39m: Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
+2025-04-14 20:57:54 - [32minfo[39m: Local binary started successfully
+2025-04-14 20:57:55 - [32minfo[39m: Testhub started with id: csk5iknji944s9ytbqrziqvulddfggor29t3vktv
+2025-04-14 21:21:35 - [32minfo[39m: Shutdown triggered by SIGINT
+2025-04-14 21:21:35 - [32minfo[39m: Visit https://observability.browserstack.com/builds/csk5iknji944s9ytbqrziqvulddfggor29t3vktv to view build report, insights, and many more debugging information all at one place!
+
+2025-04-14 21:21:35 - [32minfo[39m: View build on BrowserStack dashboard: https://automate.browserstack.com/dashboard/v2/builds/fd022f7f64426be5d398bf848fdee6853de97e86
+2025-04-14 21:21:36 - [32minfo[39m: SDK run ended for id: 53fe4afe-c962-416c-99b2-62d927b8f606, testhub id: csk5iknji944s9ytbqrziqvulddfggor29t3vktv
+2025-04-14 21:21:37 - [32minfo[39m: Deleting /Users/bohdanyankevych/QA-AUTOMATION-TYPESCRIPT-1_Homework./lesson21/playwright-browserstack-sdk.config.ts
+2025-04-14 21:21:40 - [32minfo[39m: Local binary stopped
+2025-04-14 21:22:53 - [32minfo[39m: Running SDK with args /usr/local/bin/node /Users/bohdanyankevych/QA-AUTOMATION-TYPESCRIPT-1_Homework./lesson21/node_modules/.bin/browserstack-node-sdk playwright test
+2025-04-14 21:22:53 - [32minfo[39m: Reading configs from /Users/bohdanyankevych/QA-AUTOMATION-TYPESCRIPT-1_Homework./lesson21/browserstack.yml
+2025-04-14 21:22:53 - [32minfo[39m: SDK run started with id: 49b2a0e7-d7cf-454e-8697-bb260bd34e73
+2025-04-14 21:22:55 - [32minfo[39m: Testhub started with id: xoifx5fzbeyrxgfedaupxkdlccgi9cbh7msoxltl
+2025-04-14 21:23:24 - [32minfo[39m: Visit https://observability.browserstack.com/builds/xoifx5fzbeyrxgfedaupxkdlccgi9cbh7msoxltl to view build report, insights, and many more debugging information all at one place!
+
+2025-04-14 21:23:24 - [32minfo[39m: SDK run ended for id: 49b2a0e7-d7cf-454e-8697-bb260bd34e73, testhub id: xoifx5fzbeyrxgfedaupxkdlccgi9cbh7msoxltl
+2025-04-14 21:23:25 - [32minfo[39m: Deleting /Users/bohdanyankevych/QA-AUTOMATION-TYPESCRIPT-1_Homework./lesson21/playwright-browserstack-sdk.config.ts
+2025-04-14 21:30:09 - [32minfo[39m: Running SDK with args /usr/local/bin/node /Users/bohdanyankevych/QA-AUTOMATION-TYPESCRIPT-1_Homework./lesson21/node_modules/.bin/browserstack-node-sdk playwright test
+2025-04-14 21:30:09 - [32minfo[39m: Reading configs from /Users/bohdanyankevych/QA-AUTOMATION-TYPESCRIPT-1_Homework./lesson21/browserstack.yml
+2025-04-14 21:30:09 - [32minfo[39m: SDK run started with id: 300f5b1d-ca74-47a3-aaac-6d99674b0ff7
+2025-04-14 21:30:11 - [32minfo[39m: Testhub started with id: kguehjcrjkqjyns3q3ssuhlsmxbkikixsmv1neqf
+2025-04-14 21:30:32 - [32minfo[39m: Visit https://observability.browserstack.com/builds/kguehjcrjkqjyns3q3ssuhlsmxbkikixsmv1neqf to view build report, insights, and many more debugging information all at one place!
+
+2025-04-14 21:30:33 - [32minfo[39m: SDK run ended for id: 300f5b1d-ca74-47a3-aaac-6d99674b0ff7, testhub id: kguehjcrjkqjyns3q3ssuhlsmxbkikixsmv1neqf
+2025-04-14 21:30:34 - [32minfo[39m: Deleting /Users/bohdanyankevych/QA-AUTOMATION-TYPESCRIPT-1_Homework./lesson21/playwright-browserstack-sdk.config.ts
+2025-04-14 21:32:14 - [32minfo[39m: Running SDK with args /usr/local/bin/node /Users/bohdanyankevych/QA-AUTOMATION-TYPESCRIPT-1_Homework./lesson21/node_modules/.bin/browserstack-node-sdk playwright test
+2025-04-14 21:32:14 - [32minfo[39m: Reading configs from /Users/bohdanyankevych/QA-AUTOMATION-TYPESCRIPT-1_Homework./lesson21/browserstack.yml
+2025-04-14 21:32:14 - [32minfo[39m: SDK run started with id: 20fad23f-e237-40e8-bd85-959163201189
+2025-04-14 21:32:15 - [32minfo[39m: Testhub started with id: rdmwfj6dcipnc5sqdnzu0uea1bzyi3sbxsdfsedr
+2025-04-14 21:32:37 - [32minfo[39m: Visit https://observability.browserstack.com/builds/rdmwfj6dcipnc5sqdnzu0uea1bzyi3sbxsdfsedr to view build report, insights, and many more debugging information all at one place!
+
+2025-04-14 21:32:38 - [32minfo[39m: SDK run ended for id: 20fad23f-e237-40e8-bd85-959163201189, testhub id: rdmwfj6dcipnc5sqdnzu0uea1bzyi3sbxsdfsedr
+2025-04-14 21:32:39 - [32minfo[39m: Deleting /Users/bohdanyankevych/QA-AUTOMATION-TYPESCRIPT-1_Homework./lesson21/playwright-browserstack-sdk.config.ts
+2025-04-14 21:33:38 - [32minfo[39m: Running SDK with args /usr/local/bin/node /Users/bohdanyankevych/QA-AUTOMATION-TYPESCRIPT-1_Homework./lesson21/node_modules/.bin/browserstack-node-sdk playwright test
+2025-04-14 21:33:38 - [32minfo[39m: Reading configs from /Users/bohdanyankevych/QA-AUTOMATION-TYPESCRIPT-1_Homework./lesson21/browserstack.yml
+2025-04-14 21:33:38 - [32minfo[39m: SDK run started with id: 2608cd0e-cc13-4a74-9c92-f1876841b2e5
+2025-04-14 21:33:38 - [32minfo[39m: Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
+2025-04-14 21:33:43 - [32minfo[39m: Local binary started successfully
+2025-04-14 21:33:44 - [32minfo[39m: Testhub started with id: 9zphyynpklvbjhlkaddymwpe9aihs0x7vfyyzu47
+2025-04-14 21:34:11 - [32minfo[39m: Visit https://observability.browserstack.com/builds/9zphyynpklvbjhlkaddymwpe9aihs0x7vfyyzu47 to view build report, insights, and many more debugging information all at one place!
+
+2025-04-14 21:34:11 - [32minfo[39m: SDK run ended for id: 2608cd0e-cc13-4a74-9c92-f1876841b2e5, testhub id: 9zphyynpklvbjhlkaddymwpe9aihs0x7vfyyzu47
+2025-04-14 21:34:12 - [32minfo[39m: Deleting /Users/bohdanyankevych/QA-AUTOMATION-TYPESCRIPT-1_Homework./lesson21/playwright-browserstack-sdk.config.ts
+2025-04-14 21:34:15 - [32minfo[39m: Local binary stopped
+2025-04-14 21:35:17 - [32minfo[39m: Running SDK with args /usr/local/bin/node /Users/bohdanyankevych/QA-AUTOMATION-TYPESCRIPT-1_Homework./lesson21/node_modules/.bin/browserstack-node-sdk playwright test
+2025-04-14 21:35:17 - [32minfo[39m: Reading configs from /Users/bohdanyankevych/QA-AUTOMATION-TYPESCRIPT-1_Homework./lesson21/browserstack.yml
+2025-04-14 21:35:17 - [32minfo[39m: SDK run started with id: 9dbcfc9f-66a9-425a-be33-4a24401e7d00
+2025-04-14 21:35:19 - [32minfo[39m: Testhub started with id: ylnk3bm77k03942fpmymlksbojtbodit9sep2lhr
+2025-04-14 21:35:50 - [32minfo[39m: Visit https://observability.browserstack.com/builds/ylnk3bm77k03942fpmymlksbojtbodit9sep2lhr to view build report, insights, and many more debugging information all at one place!
+
+2025-04-14 21:35:50 - [32minfo[39m: SDK run ended for id: 9dbcfc9f-66a9-425a-be33-4a24401e7d00, testhub id: ylnk3bm77k03942fpmymlksbojtbodit9sep2lhr
+2025-04-14 21:35:52 - [32minfo[39m: Deleting /Users/bohdanyankevych/QA-AUTOMATION-TYPESCRIPT-1_Homework./lesson21/playwright-browserstack-sdk.config.ts
