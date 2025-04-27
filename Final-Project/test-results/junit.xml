@@ -1,0 +1,32 @@
+<testsuites id="" name="" tests="9" failures="0" skipped="0" errors="0" time="5.55843">
+<testsuite name="api/users.spec.ts" timestamp="2025-04-23T19:40:36.311Z" hostname="chromium" tests="1" failures="0" skipped="0" time="0.55" errors="0">
+<testcase name="GET users endpoint returns 200" classname="api/users.spec.ts" time="0.55">
+</testcase>
+</testsuite>
+<testsuite name="e2e/example.spec.ts" timestamp="2025-04-23T19:40:36.311Z" hostname="chromium" tests="2" failures="0" skipped="0" time="2.474" errors="0">
+<testcase name="has title" classname="e2e/example.spec.ts" time="1.138">
+</testcase>
+<testcase name="get started link" classname="e2e/example.spec.ts" time="1.336">
+</testcase>
+</testsuite>
+<testsuite name="api/users.spec.ts" timestamp="2025-04-23T19:40:36.311Z" hostname="firefox" tests="1" failures="0" skipped="0" time="0.537" errors="0">
+<testcase name="GET users endpoint returns 200" classname="api/users.spec.ts" time="0.537">
+</testcase>
+</testsuite>
+<testsuite name="e2e/example.spec.ts" timestamp="2025-04-23T19:40:36.311Z" hostname="firefox" tests="2" failures="0" skipped="0" time="4.438" errors="0">
+<testcase name="has title" classname="e2e/example.spec.ts" time="2.077">
+</testcase>
+<testcase name="get started link" classname="e2e/example.spec.ts" time="2.361">
+</testcase>
+</testsuite>
+<testsuite name="api/users.spec.ts" timestamp="2025-04-23T19:40:36.311Z" hostname="webkit" tests="1" failures="0" skipped="0" time="0.497" errors="0">
+<testcase name="GET users endpoint returns 200" classname="api/users.spec.ts" time="0.497">
+</testcase>
+</testsuite>
+<testsuite name="e2e/example.spec.ts" timestamp="2025-04-23T19:40:36.311Z" hostname="webkit" tests="2" failures="0" skipped="0" time="3.877" errors="0">
+<testcase name="has title" classname="e2e/example.spec.ts" time="1.868">
+</testcase>
+<testcase name="get started link" classname="e2e/example.spec.ts" time="2.009">
+</testcase>
+</testsuite>
+</testsuites>
